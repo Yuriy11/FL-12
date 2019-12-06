@@ -19,3 +19,22 @@ write your code here
 .tm-banner-text{
     text-shadow: 4px 4px 2px #333; 
 }
+.flex-2-col{
+    display:flex;
+    flex-direction: row;
+}
+
+.tm-team-description-container{
+    width:33%;
+}
+.tm-section-title{
+
+    text-align: center;
+}
+.tm-section-description{
+    text-indent: 35px;
+    vertical-align: center;
+}
+.tm-team-img{
+    width:67%;
+}
