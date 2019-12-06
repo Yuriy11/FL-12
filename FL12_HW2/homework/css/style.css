@@ -3,3 +3,19 @@
 write your code here
 
 */
+.tm-nav-item:hover{
+    background-color:lightskyblue;
+    
+}
+.tm-nav-item a:hover{
+    color: #fff;
+}
+.tm-banner{
+    background-image: linear-gradient(to right, lightskyblue,burlywood);
+}
+.tm-banner-inner{
+    background-color: #fff;
+}
+.tm-banner-text{
+    text-shadow: 4px 4px 2px #333; 
+}
