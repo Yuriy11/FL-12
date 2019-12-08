@@ -1,3 +1,15 @@
+.blocks .tm-team-description-container p:last-child {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    font-style: italic;
+}
+
+.heading h2 {
+    color: lightskyblue;
+    font-weight: 300;
+    text-align: center;
+}
+
 @media print {
     body {
         padding-top: 0px;
@@ -31,8 +43,6 @@
     }
     .padding-medium h2 {
         color: #62a1c7;
-        font-weight: 300;
-        text-align: center;
     }
     .tm-footer {
         background-color: white;
@@ -57,11 +67,6 @@
     .heading ol li:nth-of-type(2n+1) {
         text-align: right;
     }
-    .blocks p:last-child {
-        letter-spacing: 4px;
-        word-spacing: 10px;
-        font-style: italic;
-    }
 }
 
 @media screen {
@@ -77,8 +82,18 @@
     .tm-banner-inner {
         background-color: #fff;
     }
+    @keyframes tm-banner-text-keyframes {
+        to {
+            left: 0;
+        }
+        from {
+            left: 200px;
+        }
+    }
     .tm-banner-text {
         text-shadow: 4px 4px 2px #333;
+        position: relative;
+        animation: tm-banner-text-keyframes 3s;
     }
     .flex-2-col {
         display: flex;
@@ -87,8 +102,14 @@
     .tm-team-description-container {
         width: 33%;
     }
+    .blocks .tm-team-description-container {
+        width: 100%;
+    }
     .tm-section-title {
         text-align: center;
+    }
+    .blocks .tm-section-title {
+        text-align: left;
     }
     .tm-section-description {
         text-indent: 35px;
@@ -96,5 +117,23 @@
     }
     .tm-team-img {
         width: 67%;
+    }
+    .box-bg:hover {
+        background-color: lightgray;
+        font-style: italic;
+    }
+    .heading li:hover::before {
+        content: ">";
+    }
+    .heading ol {
+        list-style-type: lower-alpha;
+    }
+    .heading li .text::after {
+        content: "New";
+        color: red;
+        vertical-align: top;
+        font-size: 8pt;
+        font-weight: 700;
+        font-variant: small-caps;
     }
 }
