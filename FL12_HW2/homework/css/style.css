@@ -1,40 +1,100 @@
-/*
+@media print {
+    body {
+        padding-top: 0px;
+    }
+    .tm-sidebar,
+    .tm-team-img,
+    #about,
+    .gallery-container,
+    .img-contact-us,
+    #contact,
+    .carousel-indicators {
+        display: none;
+    }
+    .tm-team-description-container {
+        text-align: center;
+    }
+    .tm-content-box {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    .tm-team-description-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    h2.tm-section-title {
+        color: #62a1c7;
+        text-transform: uppercase;
+    }
+    .tm-team-description-container {
+        background-color: white;
+    }
+    .padding-medium h2 {
+        color: #62a1c7;
+        font-weight: 300;
+        text-align: center;
+    }
+    .tm-footer {
+        background-color: white;
+    }
+    .blocks {
+        background-color: white;
+    }
+    .tm-section-description {
+        padding: 0 35px;
+        font-size: 13pt;
+    }
+    .padding-medium,
+    .carousel,
+    .tm-main-content {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .heading ol {
+        list-style: none;
+        padding: 0 150px;
+    }
+    .heading ol li:nth-of-type(2n+1) {
+        text-align: right;
+    }
+    .blocks p:last-child {
+        letter-spacing: 4px;
+        word-spacing: 10px;
+        font-style: italic;
+    }
+}
 
-write your code here
-
-*/
-.tm-nav-item:hover{
-    background-color:lightskyblue;
-    
-}
-.tm-nav-item a:hover{
-    color: #fff;
-}
-.tm-banner{
-    background-image: linear-gradient(to right, lightskyblue,burlywood);
-}
-.tm-banner-inner{
-    background-color: #fff;
-}
-.tm-banner-text{
-    text-shadow: 4px 4px 2px #333; 
-}
-.flex-2-col{
-    display:flex;
-    flex-direction: row;
-}
-
-.tm-team-description-container{
-    width:33%;
-}
-.tm-section-title{
-
-    text-align: center;
-}
-.tm-section-description{
-    text-indent: 35px;
-    vertical-align: center;
-}
-.tm-team-img{
-    width:67%;
+@media screen {
+    .tm-nav-item:hover {
+        background-color: lightskyblue;
+    }
+    .tm-nav-item a:hover {
+        color: #fff;
+    }
+    .tm-banner {
+        background-image: linear-gradient(to right, lightskyblue, burlywood);
+    }
+    .tm-banner-inner {
+        background-color: #fff;
+    }
+    .tm-banner-text {
+        text-shadow: 4px 4px 2px #333;
+    }
+    .flex-2-col {
+        display: flex;
+        flex-direction: row;
+    }
+    .tm-team-description-container {
+        width: 33%;
+    }
+    .tm-section-title {
+        text-align: center;
+    }
+    .tm-section-description {
+        text-indent: 35px;
+        vertical-align: center;
+    }
+    .tm-team-img {
+        width: 67%;
+    }
 }
