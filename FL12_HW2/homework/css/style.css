@@ -4,7 +4,7 @@
     font-style: italic;
 }
 
-.heading h2 {
+.flex-2-col h2 {
     color: lightskyblue;
     font-weight: 300;
     text-align: center;
@@ -70,6 +70,11 @@
 }
 
 @media screen {
+    .heading h2 {
+        color: lightskyblue;
+        font-weight: 400;
+        text-align: center;
+    }
     .tm-nav-item:hover {
         background-color: lightskyblue;
     }
@@ -91,13 +96,14 @@
         }
     }
     .tm-banner-text {
-        text-shadow: 4px 4px 2px #333;
+        text-shadow: 4px 4px 3px #333;
         position: relative;
         animation: tm-banner-text-keyframes 3s;
     }
     .flex-2-col {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
     .tm-team-description-container {
         width: 33%;
@@ -105,15 +111,13 @@
     .blocks .tm-team-description-container {
         width: 100%;
     }
-    .tm-section-title {
-        text-align: center;
-    }
     .blocks .tm-section-title {
         text-align: left;
     }
     .tm-section-description {
-        text-indent: 35px;
         vertical-align: center;
+        text-indent: 25px;
+        line-height: 30px;
     }
     .tm-team-img {
         width: 67%;
@@ -135,5 +139,52 @@
         font-size: 8pt;
         font-weight: 700;
         font-variant: small-caps;
+    }
+    .box {
+        padding: 10px;
+    }
+    .blocks .box p::first-letter {
+        font-weight: bold;
+    }
+    .blocks .box:nth-of-type(2n+1) {
+        background-color: lightskyblue;
+        color: white;
+    }
+    .form-group input:focus {
+        background-color: lightskyblue;
+    }
+    .form-control {
+        border: none;
+        border-bottom: 1px solid lightskyblue;
+    }
+    .contact-form textarea,
+    .btn {
+        border: 1px solid lightskyblue;
+    }
+    .form-control[name="contact_message"]:focus {
+        border: 1px solid lightskyblue;
+        box-shadow: none;
+    }
+    .contact-form .btn {
+        float: right;
+        background-color: white;
+        color: lightskyblue;
+        padding: 15px 25px;
+    }
+    section,
+    .tm-sidebar,
+    #home {
+        box-shadow: 0 0.9px 1em rgba(61, 55, 61, 0.7);
+    }
+    #contact_message::after {
+        content: "";
+        background: url(../img/email-icon.png) no-repeat;
+        bottom: 0px;
+        right: 0px;
+    }
+    section::before {
+        content: "";
+        border-top: 40px solid lightskyblue;
+        border-right: 40px solid transparent;
     }
 }
