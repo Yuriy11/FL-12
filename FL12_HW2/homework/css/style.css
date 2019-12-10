@@ -6,8 +6,8 @@
 
 .flex-2-col h2 {
     color: lightskyblue;
-    font-weight: 300;
     text-align: center;
+    font-weight: 300;
 }
 
 @media print {
@@ -34,25 +34,16 @@
         max-width: 100%;
         padding: 0;
     }
-    h2.tm-section-title {
-        color: #62a1c7;
+    section h2 {
+        color:  lightskyblue;
         text-transform: uppercase;
+        font-weight: 300;
     }
-    .tm-team-description-container {
-        background-color: white;
-    }
-    .padding-medium h2 {
-        color: #62a1c7;
-    }
-    .tm-footer {
-        background-color: white;
-    }
-    .blocks {
+    .tm-footer, .blocks, .tm-team-description-container {
         background-color: white;
     }
     .tm-section-description {
         padding: 0 35px;
-        font-size: 13pt;
     }
     .padding-medium,
     .carousel,
@@ -66,6 +57,10 @@
     }
     .heading ol li:nth-of-type(2n+1) {
         text-align: right;
+    }
+    .tm-content-box h2{
+        padding-top: 18px;
+        text-align: center;
     }
 }
 
@@ -140,13 +135,13 @@
         font-weight: 700;
         font-variant: small-caps;
     }
-    .box {
+    .box-work {
         padding: 10px;
     }
-    .blocks .box p::first-letter {
+    .blocks .box-work  p::first-letter {
         font-weight: bold;
     }
-    .blocks .box:nth-of-type(2n+1) {
+    .blocks .box-work:nth-of-type(2n+1) {
         background-color: lightskyblue;
         color: white;
     }
@@ -176,12 +171,10 @@
     #home {
         box-shadow: 0 0.9px 1em rgba(61, 55, 61, 0.7);
     }
-    #contact_message::after {
-        content: "";
-        background: url(../img/email-icon.png) no-repeat;
-        bottom: 0px;
-        right: 0px;
-    }
+    .form-group textarea {
+        background: url(../img/email-icon.png) right 10px bottom 10px no-repeat;
+        background-size:30px;
+      }
     section::before {
         content: "";
         border-top: 40px solid lightskyblue;
