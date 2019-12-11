@@ -1,1 +1,65 @@
-// Write your styles here
+$headerTextColor:#2c2f3c;
+$headerBackgroundImageUrl:"../img/m-h-day.jpg";
+$contentBackgroungColor:#21232e;
+$linkColor:#fff;
+$cardContentColor:#fff;
+$backgrondColor:#fff;
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: $backgrondColor;
+    
+    a{
+        color:$linkColor;
+    }
+}
+
+.header {
+    color: $headerTextColor;
+    background: center url($headerBackgroundImageUrl) no-repeat;
+    background-size: cover;
+
+    .header-wrap {
+        padding: 20px 185px 185px 175px;
+
+        .landing-logo {
+            display: flex;
+            flex-direction: row;
+            img {
+                height: 42px;
+                width: 42px;
+            }
+        }
+        .header_heading{
+            font-size: 38pt;
+            font-weight: bold;
+        }
+    }
+}
+.section{
+    .section_card_wrap{
+        margin: 0 auto;
+        width: 1120px;
+    }
+    .section_card{
+        margin:12px 0px;
+        padding: 20px;
+        background-color: $contentBackgroungColor;
+        color:$cardContentColor;
+        display: flex;
+        border-radius:5px;
+        .section_card_img{
+            border-radius:5px;
+            width: 100%;
+        }
+        .section_card_heading{
+            vertical-align: middle;
+        }
+
+        .section_card_right_container{
+            text-align: center;
+        }
+    }
+    
+}

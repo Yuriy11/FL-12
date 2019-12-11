@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff; }
+  body a {
+    color: #fff; }
+
+.header {
+  color: #2c2f3c;
+  background: center url("../img/m-h-day.jpg") no-repeat;
+  background-size: cover; }
+  .header .header-wrap {
+    padding: 20px 185px 185px 175px; }
+    .header .header-wrap .landing-logo {
+      display: flex;
+      flex-direction: row; }
+      .header .header-wrap .landing-logo img {
+        height: 42px;
+        width: 42px; }
+    .header .header-wrap .header_heading {
+      font-size: 38pt;
+      font-weight: bold; }
+
+.section .section_card_wrap {
+  margin: 0 auto;
+  width: 1120px; }
+.section .section_card {
+  margin: 12px 0px;
+  padding: 20px;
+  background-color: #21232e;
+  color: #fff;
+  display: flex;
+  border-radius: 5px; }
+  .section .section_card .section_card_img {
+    border-radius: 5px;
+    width: 100%; }
+  .section .section_card .section_card_heading {
+    vertical-align: middle; }
+  .section .section_card .section_card_right_container {
+    text-align: center; }
