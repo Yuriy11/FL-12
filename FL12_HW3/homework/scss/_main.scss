@@ -9,7 +9,7 @@ body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: $backgrondColor;
-    
+    width:1920px;
     a{
         color:$linkColor;
     }
@@ -21,19 +21,61 @@ body {
     background-size: cover;
 
     .header-wrap {
-        padding: 20px 185px 185px 175px;
+        padding: 20px 185px 176px 191px;
 
         .landing-logo {
             display: flex;
             flex-direction: row;
             img {
-                height: 42px;
-                width: 42px;
+                height: 45px;
+                width: 45px;
             }
+            p{
+                display: inline;
+                text-align: center;
+                margin:0;
+                font-size: 18pt;
+                font-weight: 600;
+                margin-top: -3px;
+                margin-left: 15px;
+                span{
+                    display: block;
+                    font-size: 7pt;
+                    margin-top: 3px;
+                    letter-spacing: 0px;
+                }
+            }
+
         }
         .header_heading{
-            font-size: 38pt;
+            font-size: 54pt;
             font-weight: bold;
+            width:40%;
+            line-height: 1;
+            margin-bottom: 0.5em;
+        }
+        .header_text{
+            font-family: 'Hind', sans-serif;
+            letter-spacing: 0.2px;
+            white-space: pre-line;
+            line-height: 1.5;
+        }
+        div:last-child{
+            margin-top: 60px;
+            .header_button{
+                background-color: #699900;
+                border-radius: 2px;
+                padding: 13px 41px;
+                color: #fff;
+                font-size: 13pt;
+                font-weight: bold;
+                border: none;
+            }
+            .login{
+                font-size: 15pt;
+                font-weight: 300;
+                margin-left: 150px;
+            }
         }
     }
 }
