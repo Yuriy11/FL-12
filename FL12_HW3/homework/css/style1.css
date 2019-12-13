@@ -92,10 +92,6 @@ body {
       width: 190px;
       height: 50px;
       background-color: #14a0c7; }
-  .section .section_link {
-    padding-top: 15px;
-    padding-bottom: 10px;
-    color: #c0c3ce; }
   .section .section_card_wrap {
     margin: 0 auto;
     width: 1116px;
@@ -125,6 +121,10 @@ body {
         margin: 0 auto;
         text-align: justify;
         line-height: 1.5;
+        color: #c0c3ce; }
+      .section .section_card .section_card_right_container .section_link {
+        padding-top: 15px;
+        padding-bottom: 10px;
         color: #c0c3ce; }
   .section .section_banner {
     display: flex;
