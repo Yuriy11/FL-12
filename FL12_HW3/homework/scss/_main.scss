@@ -1,25 +1,43 @@
-$headerTextColor:#2c2f3c;
+$mainBackgroundColor:#fff;
 
+$headerTextColor:#2c2f3c;
 $headerBackgroundImageUrl:"../img/m-h-day.jpg";
 $contentBackgroungColor:#21232e;
-$linkColor:#fff;
-$mainBackgroundColor:#fff;
+
+$cardHeadingColor:#fff;
+$cardContentColor:#c0c3ce;
+
 $bannerGradientColor0:#639216;
 $bannerGradientColor1:#2f5dd2;
 $bannerHeaderColor:#2c2f3c;
-$cardContentColor:#c0c3ce;
-$cardHeadingColor:#fff;
-$buttorColor:#699900;
+
+$linkColor:#fff;
+$mainButtonColor:#699900;
+$wordBackgroundColor:#14a0c7;
+
+$z-indexes:("deepest":-2,"deep":-1,"mid":0,"high":1,"highest":2);
+
+@mixin word-bg($left,$bottom,$height,$width,$color){
+    position: absolute;
+    content:"";
+    z-index: map-get($map: $z-indexes, $key: "deep");
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height; 
+    background-color:$color;
+}
+@mixin link{
+    color:$linkColor;
+}
 @mixin main-button{
-    background-color: $buttorColor;
+    background-color: $mainButtonColor;
     border-radius: 2px;
     padding: 14px 43px;
-    color: $linkColor;
     font-size: 12.5pt;
     font-weight: bold;
     border: none;
     letter-spacing: -0.2px;
-    color:$linkColor;
 }
 @mixin logo-with-text{
     display: flex;
@@ -58,7 +76,6 @@ body {
     background: center url($headerBackgroundImageUrl) no-repeat;
     background-size: cover;
     border-bottom-right-radius: 50em 18em;
-    z-index: 1;
     a{
         color:$linkColor;
     }
@@ -74,16 +91,9 @@ body {
             line-height: 1;
             margin-bottom: 0.5em;
             position: relative;
-            &:after{
-                position: absolute;
-                content:"";
-                background-color: red;
-                bottom: 0px;
-                left: 0px;
-                width: 20px;
-                height: 20px;
-                z-index: 2;
-
+            z-index: map-get($map: $z-indexes, $key: "highest");
+            &::after{
+                @include word-bg(0px,0px,50px,303px,$wordBackgroundColor)
             }
         }
         .header_text{
@@ -107,15 +117,19 @@ body {
 }
 .section{
     position: relative;
-    z-index: 1;
+    z-index: map-get($map: $z-indexes, $key: "deep");;
     .section_text{
-    text-align: center;
-    font-size: 32pt;
-    font-weight: 600;
-    margin-top: 0.85em;
-    margin-bottom: 0.86em;
-    letter-spacing: -0.3px;
-    color: $headerTextColor;
+        position: relative;
+        text-align: center;
+        font-size: 32pt;
+        font-weight: 600;
+        margin-top: 0.85em;
+        margin-bottom: 0.86em;
+        letter-spacing: -0.3px;
+        color: $headerTextColor;
+        &::after{
+            @include word-bg(968px,9px,50px,190px,$wordBackgroundColor)
+        }
     }
     .section_link{
         padding-top: 15px;
@@ -165,16 +179,22 @@ body {
         box-sizing: border-box;
         margin: 0 auto;
         width: 1197px;
-        background: linear-gradient(to right, $bannerGradientColor0, $bannerGradientColor1);
+        background: linear-gradient(60deg, $bannerGradientColor0, $bannerGradientColor1);
         border-radius: 6px;
         padding:26px 160px 28px 160px;
+        position: relative;
+        z-index:  map-get($map: $z-indexes, $key: "deep");
         .section_banner_heading{
+            position: relative;
             color:$bannerHeaderColor;
             font-size: 23pt;
             font-weight: 700;
             margin-top: 0em;
             margin-bottom: 0.1em;
             letter-spacing: -0.2px;
+            &::after{
+                @include word-bg(120px,0px,50px,66px,$wordBackgroundColor)
+            }
         }
         .section_banner_text{
             color:$cardContentColor;
@@ -192,7 +212,7 @@ body {
     margin-top: -75px;
     padding-top: 115px;
     position: relative;
-    z-index: -1;
+    z-index: map-get($map: $z-indexes, $key: "deepest");
     color: $cardContentColor;
     font-family: 'Hind', sans-serif;
     .footer-wrap {
