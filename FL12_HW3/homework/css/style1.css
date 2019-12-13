@@ -1,6 +1,28 @@
+.header .header-wrap .landing-logo, .footer .footer-wrap .footer_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .header .header-wrap .landing-logo img, .footer .footer-wrap .footer_logo img {
+    padding-top: 5px;
+    height: 45px;
+    width: 45px; }
+  .header .header-wrap .landing-logo p, .footer .footer-wrap .footer_logo p {
+    font-family: "Hind", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    font-size: 18pt;
+    font-weight: 600;
+    margin-left: 15px; }
+    .header .header-wrap .landing-logo p span, .footer .footer-wrap .footer_logo p span {
+      font-size: 7pt;
+      margin-top: -4px;
+      letter-spacing: 0.3px; }
+
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   background-color: #fff;
   width: 1920px;
   box-sizing: border-box; }
@@ -15,25 +37,7 @@ body {
   .header .header-wrap {
     padding: 15px 185px 176px 191px; }
     .header .header-wrap .landing-logo {
-      display: flex;
-      flex-direction: row; }
-      .header .header-wrap .landing-logo img {
-        padding-top: 5px;
-        height: 45px;
-        width: 45px; }
-      .header .header-wrap .landing-logo p {
-        font-family: 'Hind', sans-serif;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0;
-        font-size: 18pt;
-        font-weight: 600;
-        margin-left: 15px; }
-        .header .header-wrap .landing-logo p span {
-          font-size: 7pt;
-          margin-top: -4px;
-          letter-spacing: 0.3px; }
+      color: #2c2f3c; }
     .header .header-wrap .header_heading {
       font-size: 54pt;
       font-weight: bold;
@@ -52,13 +56,14 @@ body {
         height: 50px;
         background-color: #14a0c7; }
     .header .header-wrap .header_text {
-      font-family: 'Hind', sans-serif;
+      font-family: "Hind", sans-serif;
       letter-spacing: 0.2px;
       white-space: pre-line;
       line-height: 1.5; }
     .header .header-wrap div:last-child {
       margin-top: 60px; }
       .header .header-wrap div:last-child .header_button {
+        color: #fff;
         background-color: #699900;
         border-radius: 2px;
         padding: 14px 43px;
@@ -116,7 +121,7 @@ body {
         font-size: 18pt;
         font-weight: 600; }
       .section .section_card .section_card_right_container .section_card_text {
-        font-family: 'Hind', sans-serif;
+        font-family: "Hind", sans-serif;
         width: 72%;
         margin: 0 auto;
         text-align: justify;
@@ -157,8 +162,10 @@ body {
         background-color: #14a0c7; }
     .section .section_banner .section_banner_text {
       color: #c0c3ce;
+      font-family: "Hind", sans-serif;
       letter-spacing: 0.2px; }
     .section .section_banner .section_banner_button {
+      color: #fff;
       background-color: #699900;
       border-radius: 2px;
       padding: 14px 43px;
@@ -175,32 +182,14 @@ body {
   position: relative;
   z-index: -2;
   color: #c0c3ce;
-  font-family: 'Hind', sans-serif; }
+  font-family: "Hind", sans-serif; }
   .footer .footer-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 195px 60px 192px; }
     .footer .footer-wrap .footer_logo {
-      display: flex;
-      flex-direction: row; }
-      .footer .footer-wrap .footer_logo img {
-        padding-top: 5px;
-        height: 45px;
-        width: 45px; }
-      .footer .footer-wrap .footer_logo p {
-        font-family: 'Hind', sans-serif;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0;
-        font-size: 18pt;
-        font-weight: 600;
-        margin-left: 15px; }
-        .footer .footer-wrap .footer_logo p span {
-          font-size: 7pt;
-          margin-top: -4px;
-          letter-spacing: 0.3px; }
+      color: #c0c3ce; }
     .footer .footer-wrap .footer_text {
       width: 300px;
       font-size: 10pt;

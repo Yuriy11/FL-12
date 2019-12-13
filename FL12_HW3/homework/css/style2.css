@@ -1,13 +1,35 @@
+.header .header-wrap .landing-logo, .footer .footer-wrap .footer_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .header .header-wrap .landing-logo img, .footer .footer-wrap .footer_logo img {
+    padding-top: 5px;
+    height: 45px;
+    width: 45px; }
+  .header .header-wrap .landing-logo p, .footer .footer-wrap .footer_logo p {
+    font-family: "Fresca", sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    font-size: 18pt;
+    font-weight: 600;
+    margin-left: 15px; }
+    .header .header-wrap .landing-logo p span, .footer .footer-wrap .footer_logo p span {
+      font-size: 7pt;
+      margin-top: -4px;
+      letter-spacing: 0.3px; }
+
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #21232e;
   width: 1920px;
   box-sizing: border-box; }
 
 .header {
-  color: #2c2f3c;
-  background: center url("../img/m-h-day.jpg") no-repeat;
+  color: #fff;
+  background: center url("../img/m-h-night.jpg") no-repeat;
   background-size: cover;
   border-bottom-right-radius: 50em 18em; }
   .header a {
@@ -15,25 +37,7 @@ body {
   .header .header-wrap {
     padding: 15px 185px 176px 191px; }
     .header .header-wrap .landing-logo {
-      display: flex;
-      flex-direction: row; }
-      .header .header-wrap .landing-logo img {
-        padding-top: 5px;
-        height: 45px;
-        width: 45px; }
-      .header .header-wrap .landing-logo p {
-        font-family: 'Hind', sans-serif;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0;
-        font-size: 18pt;
-        font-weight: 600;
-        margin-left: 15px; }
-        .header .header-wrap .landing-logo p span {
-          font-size: 7pt;
-          margin-top: -4px;
-          letter-spacing: 0.3px; }
+      color: #fff; }
     .header .header-wrap .header_heading {
       font-size: 54pt;
       font-weight: bold;
@@ -50,16 +54,17 @@ body {
         left: 0px;
         width: 303px;
         height: 50px;
-        background-color: #14a0c7; }
+        background-color: #ff4e33; }
     .header .header-wrap .header_text {
-      font-family: 'Hind', sans-serif;
+      font-family: "Fresca", sans-serif;
       letter-spacing: 0.2px;
       white-space: pre-line;
       line-height: 1.5; }
     .header .header-wrap div:last-child {
       margin-top: 60px; }
       .header .header-wrap div:last-child .header_button {
-        background-color: #699900;
+        color: #fff;
+        background-color: #e3ac00;
         border-radius: 2px;
         padding: 14px 43px;
         font-size: 12.5pt;
@@ -82,7 +87,7 @@ body {
     margin-top: 0.85em;
     margin-bottom: 0.86em;
     letter-spacing: -0.3px;
-    color: #2c2f3c; }
+    color: #fff; }
     .section .section_text::after {
       position: absolute;
       content: "";
@@ -91,7 +96,7 @@ body {
       left: 968px;
       width: 190px;
       height: 50px;
-      background-color: #14a0c7; }
+      background-color: #ff4e33; }
   .section .section_card_wrap {
     margin: 0 auto;
     width: 1116px;
@@ -99,7 +104,7 @@ body {
   .section .section_card {
     margin-bottom: 25px;
     padding: 20px;
-    background-color: #21232e;
+    background-color: #3b3f50;
     display: flex;
     align-items: center;
     border-radius: 5px; }
@@ -116,16 +121,16 @@ body {
         font-size: 18pt;
         font-weight: 600; }
       .section .section_card .section_card_right_container .section_card_text {
-        font-family: 'Hind', sans-serif;
+        font-family: "Fresca", sans-serif;
         width: 72%;
         margin: 0 auto;
         text-align: justify;
         line-height: 1.5;
-        color: #c0c3ce; }
+        color: #d1d1d1; }
       .section .section_card .section_card_right_container .section_link {
         padding-top: 15px;
         padding-bottom: 10px;
-        color: #c0c3ce; }
+        color: #d1d1d1; }
   .section .section_banner {
     display: flex;
     align-items: center;
@@ -133,14 +138,14 @@ body {
     box-sizing: border-box;
     margin: 0 auto;
     width: 1197px;
-    background: linear-gradient(60deg, #639216, #2f5dd2);
+    background: linear-gradient(60deg, #dfa505, #942f50);
     border-radius: 6px;
     padding: 26px 160px 28px 160px;
     position: relative;
     z-index: -1; }
     .section .section_banner .section_banner_heading {
       position: relative;
-      color: #2c2f3c;
+      color: #fff;
       font-size: 23pt;
       font-weight: 700;
       margin-top: 0em;
@@ -154,12 +159,14 @@ body {
         left: 120px;
         width: 66px;
         height: 50px;
-        background-color: #14a0c7; }
+        background-color: #ff4e33; }
     .section .section_banner .section_banner_text {
-      color: #c0c3ce;
+      color: #d1d1d1;
+      font-family: "Fresca", sans-serif;
       letter-spacing: 0.2px; }
     .section .section_banner .section_banner_button {
-      background-color: #699900;
+      color: #fff;
+      background-color: #e3ac00;
       border-radius: 2px;
       padding: 14px 43px;
       font-size: 12.5pt;
@@ -169,38 +176,20 @@ body {
       height: 48px; }
 
 .footer {
-  background-color: #21232e;
+  background-color: #3b3f50;
   margin-top: -75px;
   padding-top: 115px;
   position: relative;
   z-index: -2;
-  color: #c0c3ce;
-  font-family: 'Hind', sans-serif; }
+  color: #d1d1d1;
+  font-family: "Fresca", sans-serif; }
   .footer .footer-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 195px 60px 192px; }
     .footer .footer-wrap .footer_logo {
-      display: flex;
-      flex-direction: row; }
-      .footer .footer-wrap .footer_logo img {
-        padding-top: 5px;
-        height: 45px;
-        width: 45px; }
-      .footer .footer-wrap .footer_logo p {
-        font-family: 'Hind', sans-serif;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        margin: 0;
-        font-size: 18pt;
-        font-weight: 600;
-        margin-left: 15px; }
-        .footer .footer-wrap .footer_logo p span {
-          font-size: 7pt;
-          margin-top: -4px;
-          letter-spacing: 0.3px; }
+      color: #d1d1d1; }
     .footer .footer-wrap .footer_text {
       width: 300px;
       font-size: 10pt;
