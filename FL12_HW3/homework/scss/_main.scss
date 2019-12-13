@@ -1,51 +1,71 @@
 $headerTextColor:#2c2f3c;
+
 $headerBackgroundImageUrl:"../img/m-h-day.jpg";
 $contentBackgroungColor:#21232e;
 $linkColor:#fff;
-$cardContentColor:#fff;
-$backgrondColor:#fff;
-
+$mainBackgroundColor:#fff;
+$bannerGradientColor0:#639216;
+$bannerGradientColor1:#2f5dd2;
+$bannerHeaderColor:#2c2f3c;
+$cardContentColor:#c0c3ce;
+$cardHeadingColor:#fff;
+$buttorColor:#699900;
+@mixin main-button{
+    background-color: $buttorColor;
+    border-radius: 2px;
+    padding: 14px 43px;
+    color: $linkColor;
+    font-size: 12.5pt;
+    font-weight: bold;
+    border: none;
+    letter-spacing: -0.2px;
+    color:$linkColor;
+}
+@mixin logo-with-text{
+    display: flex;
+    flex-direction: row;
+    img {
+        padding-top: 5px;
+        height: 45px;
+        width: 45px;
+    }
+    p{
+        font-family: 'Hind', sans-serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin:0;
+        font-size: 18pt;
+        font-weight: 600;
+        margin-left: 15px;
+        span{
+            font-size: 7pt;
+            margin-top: -4px;
+            letter-spacing: 0.3px;
+        }
+    }
+}
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    background-color: $backgrondColor;
+    background-color: $mainBackgroundColor;
     width:1920px;
-    a{
-        color:$linkColor;
-    }
+    box-sizing: border-box;
 }
 
 .header {
     color: $headerTextColor;
     background: center url($headerBackgroundImageUrl) no-repeat;
     background-size: cover;
-
+    border-bottom-right-radius: 50em 18em;
+    z-index: 1;
+    a{
+        color:$linkColor;
+    }
     .header-wrap {
-        padding: 20px 185px 176px 191px;
-
+        padding: 15px 185px 176px 191px;
         .landing-logo {
-            display: flex;
-            flex-direction: row;
-            img {
-                height: 45px;
-                width: 45px;
-            }
-            p{
-                display: inline;
-                text-align: center;
-                margin:0;
-                font-size: 18pt;
-                font-weight: 600;
-                margin-top: -3px;
-                margin-left: 15px;
-                span{
-                    display: block;
-                    font-size: 7pt;
-                    margin-top: 3px;
-                    letter-spacing: 0px;
-                }
-            }
-
+          @include logo-with-text;
         }
         .header_heading{
             font-size: 54pt;
@@ -53,6 +73,18 @@ body {
             width:40%;
             line-height: 1;
             margin-bottom: 0.5em;
+            position: relative;
+            &:after{
+                position: absolute;
+                content:"";
+                background-color: red;
+                bottom: 0px;
+                left: 0px;
+                width: 20px;
+                height: 20px;
+                z-index: 2;
+
+            }
         }
         .header_text{
             font-family: 'Hind', sans-serif;
@@ -63,13 +95,7 @@ body {
         div:last-child{
             margin-top: 60px;
             .header_button{
-                background-color: #699900;
-                border-radius: 2px;
-                padding: 13px 41px;
-                color: #fff;
-                font-size: 13pt;
-                font-weight: bold;
-                border: none;
+                @include main-button;
             }
             .login{
                 font-size: 15pt;
@@ -80,28 +106,108 @@ body {
     }
 }
 .section{
+    position: relative;
+    z-index: 1;
+    .section_text{
+    text-align: center;
+    font-size: 32pt;
+    font-weight: 600;
+    margin-top: 0.85em;
+    margin-bottom: 0.86em;
+    letter-spacing: -0.3px;
+    color: $headerTextColor;
+    }
+    .section_link{
+        padding-top: 15px;
+        padding-bottom: 10px;
+        color: $cardContentColor;
+    }
     .section_card_wrap{
         margin: 0 auto;
-        width: 1120px;
+        width: 1116px;
+        margin-bottom: 138px;
     }
     .section_card{
-        margin:12px 0px;
+        margin-bottom: 25px;
         padding: 20px;
         background-color: $contentBackgroungColor;
-        color:$cardContentColor;
         display: flex;
+        align-items: center;
         border-radius:5px;
         .section_card_img{
             border-radius:5px;
-            width: 100%;
+            width: 89%;
         }
-        .section_card_heading{
-            vertical-align: middle;
-        }
-
         .section_card_right_container{
+            color:$cardHeadingColor;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            .section_card_heading{
+                padding-bottom: 14px;
+                font-size: 18pt;
+                font-weight: 600;
+            }
+            .section_card_text{
+                font-family: 'Hind', sans-serif;   
+                width: 72%;
+                margin: 0 auto;
+                text-align: justify;
+                line-height: 1.5;
+                color: $cardContentColor;
+            }
         }
     }
-    
+    .section_banner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 1197px;
+        background: linear-gradient(to right, $bannerGradientColor0, $bannerGradientColor1);
+        border-radius: 6px;
+        padding:26px 160px 28px 160px;
+        .section_banner_heading{
+            color:$bannerHeaderColor;
+            font-size: 23pt;
+            font-weight: 700;
+            margin-top: 0em;
+            margin-bottom: 0.1em;
+            letter-spacing: -0.2px;
+        }
+        .section_banner_text{
+            color:$cardContentColor;
+            letter-spacing: 0.2px;
+        }
+        .section_banner_button{
+            @include main-button;
+            height: 48px;
+        }
+        
+    }
+}
+.footer{
+    background-color: $contentBackgroungColor;
+    margin-top: -75px;
+    padding-top: 115px;
+    position: relative;
+    z-index: -1;
+    color: $cardContentColor;
+    font-family: 'Hind', sans-serif;
+    .footer-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 195px 60px 192px;
+        .footer_logo{
+            @include logo-with-text;
+        }
+        .footer_text{
+            width: 300px;
+            font-size: 10pt;
+            line-height: 1.5;
+            letter-spacing: 0.2px;
+        }
+    }
 }
