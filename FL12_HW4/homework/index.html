@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Gelasio:400,600,700&display=swap" rel="stylesheet">
     <title>Front-end Lab</title>
   </head>
 </html>
@@ -13,8 +14,8 @@
     <a href="#" class="header__branding">
       Front-end Lab
     </a>
-    <nav class="header__nav">
-      <ul>
+    <nav>
+      <ul class="header__nav">
         <li class="header__nav__item"><a href="#">Home</a></li>
         <li class="header__nav__item"><a href="#">About</a></li>
         <li class="header__nav__item"><a href="#">Gallery</a></li>
@@ -23,17 +24,34 @@
     </nav>
   </header>
   <main>
-    <section id="intro" class="intro">
-      <h1 class="intro__heading">Hello! This is Front-end Lab.</h1>
-      <h4 class="intro__sub-heading">EPAM Front-end Lab</h4>
-      <a class="intro__button" href="#">Discover more</a>
-    </section>
-    <section class="blog">
-      <div class="blog__item">
-        <img class="blog__item__img" src="../img/blog-image1.jpg">
+    <section id="blog" class="blog">
+      <div id="intro" class="intro">
+        <h1 class="blog__intro__heading">Hello! This is Front-end Lab.</h1>
+        <h4 class="blog__intro__sub-heading">EPAM Front-end Lab</h4>
+        <a class="blog__intro__button" href="#">Discover more</a>
       </div>
-
-
+      <article class="blog__item">
+        <img class="blog__item__img" src="img/blog-image1.jpg" />
+        <p class="blog__item__header">
+          We Help You To Make Front-end Great Again
+        </p>
+        <div class="blog__item__info">
+          <img class="blog__item__info__img" src="img/author-image1.jpg" />
+          <span class="blog__item__info__autrhor">Jen Lopez</span>
+          <time class="blog__item__info__date">July 22,2017</time>
+          <span class="blog__item__info__comments">35 Comments</span>
+        </div>
+        <p class="blog__item__short">Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, sed do eiusmod 
+          tempor incididunt ut labore et dolore magna 
+          aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor 
+          in reprehenderit in voluptate velit esse cillum 
+          dolore eu fugiat nulla pariatur.
+        </p>
+        <a href="#" class="blog__item__button">Continue Reading</a>
+      </article>
     </section>
   </main>
   <footer></footer>
