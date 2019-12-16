@@ -12,7 +12,8 @@ body {
   height: 10vh;
   background-color: #ffffff;
   position: fixed;
-  width: 100%; }
+  width: 100%; 
+  z-index: 2;}
   .header a {
     color: #555555;
     text-decoration: none; }
