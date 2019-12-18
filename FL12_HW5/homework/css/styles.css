@@ -12,6 +12,8 @@
 
 body {
   font-family: roboto;
+  background-color: var(--bg-color--dark);
+  margin: 0px 8px;
 }
 .post-1 {
 	background: #9d27b0;
@@ -30,3 +32,71 @@ body {
 }
 
 /* Your styles go here */
+img{width: 100%;}
+.container{
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.container:last-child{
+  margin-bottom: 0px;
+}
+
+.page-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color--header);
+  padding: 0rem 0.7rem;
+}
+
+.branding{
+  font-size: 2rem;
+  font-weight: 100;
+  color: #fff;
+  margin: 1rem 0rem;
+}
+.branding .branding-part-2{
+  color:#d12767;
+  font-weight: 300;
+}
+.header-nav{
+  list-style: none;
+  display: flex;
+  padding-left: 0px;
+}
+.header-nav__item{
+  padding: 0rem 0.3rem;
+}
+
+.header-nav__item a{
+    color: var(--link);
+    text-decoration: none;
+    font-size: 0.6rem;
+}
+
+.central-container{
+  display: flex;
+  justify-content: space-between;
+}
+.posts-block{
+  flex-basis: 74%;
+}
+.news-block{
+  flex-basis: 24%;
+}
+.post{
+  display: flex;
+}
+.post__image{
+  flex-basis: 51%;
+}
+.post__content{
+  flex-basis: 49%;
+  position: relative;
+}
+.page-footer{
+  background-color: var(--bg-footer-color);
+}
