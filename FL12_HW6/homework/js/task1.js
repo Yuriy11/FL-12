@@ -8,7 +8,7 @@ if (isNaN(a) || isNaN(b) || isNaN(c)) {
   console.log("disc:" + discriminant);
   if (discriminant < 0) {
     console.log("no solution");
-  } else if (discriminant == 0) {
+  } else if (discriminant === 0) {
     console.log("disc=0");
     console.log("x=" + -b / (2 * a));
   } else {
