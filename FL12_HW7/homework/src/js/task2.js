@@ -13,10 +13,11 @@ if (continueGame) {
         currentPocketNumber = Math.round(Math.random() * initialPocketAmount);
         do {
             console.log("current attempt : " + currentAttempt + "; pocket number : " + currentPocketNumber);
-            userPocketChoise = parseInt(prompt("Chose a roulette pocket from 0 to " + (initialPocketAmount * pocketAmountMultiplier) +
-                "\nAttempts left: " + (3 - currentAttempt) + " attempts" +
+            userPocketChoise = parseInt(prompt("Chose a roulette pocket from 0 to " +
+                initialPocketAmount * pocketAmountMultiplier +
+                "\nAttempts left: " + 3 - currentAttempt + " attempts" +
                 "\nTotal prize: " + userPrize + "$" +
-                "\nPossible prize on current attempt: " + (prizes[currentAttempt] * prizeMultiplier) + "$"));
+                "\nPossible prize on current attempt: " + prizes[currentAttempt] * prizeMultiplier + "$"));
             console.log("user choise " + userPocketChoise);
             if (userPocketChoise === currentPocketNumber) {
                 userGuessed = true;
@@ -28,7 +29,8 @@ if (continueGame) {
         }
         while (currentAttempt < 3)
         if (userGuessed === true) {
-            continueGame = confirm("Congratulation, you won! Your prize is: " + userPrize + "$. Do you want to continue?");
+            continueGame = confirm("Congratulation, you won! Your prize is: " +
+                userPrize + "$. Do you want to continue?");
         } else {
             continueGame = false;
         }
