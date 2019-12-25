@@ -9,23 +9,23 @@ if (!email) {
 } else if (email === "user@gmail.com") {
     password = prompt("please enter your password");
     if (!password) {
-        alert("Canceled.")
+        alert("Canceled.");
     } else if (password === "userPassword") {
         personVerified = true;
     } else {
-        alert("Wrong password")
+        alert("Wrong password");
     }
 } else if (email === "admin@gmail.com") {
     password = prompt("please enter your password");
     if (!password) {
-        alert("Canceled.")
+        alert("Canceled.");
     } else if (password === "adminPassword") {
         personVerified = true;
     } else {
-        alert("Wrong password")
+        alert("Wrong password");
     }
 } else {
-    alert("I don't know you")
+    alert("I don't know you");
 }
 
 if (personVerified) {
@@ -33,36 +33,36 @@ if (personVerified) {
         if (email === "user@gmail.com") {
             password = prompt("please repeat your current password");
             if (!password) {
-                alert("Canceled.")
+                alert("Canceled.");
             } else if (password === "userPassword") {
                 passwordChangeAllowed = true;
             } else {
-                alert("Wrong password")
+                alert("Wrong password");
             }
         } else if (email === "admin@gmail.com") {
             password = prompt("please repeat your current password");
             if (!password) {
-                alert("Canceled.")
+                alert("Canceled.");
             } else if (password === "adminPassword") {
                 passwordChangeAllowed = true;
             } else {
-                alert("Wrong password")
+                alert("Wrong password");
             }
         }
     } else {
-        alert("You have failed the change.")
+        alert("You have failed the change.");
     }
 }
 
 if (passwordChangeAllowed) {
-    let newPassword = prompt("please enter new password")
+    let newPassword = prompt("please enter new password");
     if (!newPassword) {
-        alert("Canceled.")
+        alert("Canceled.");
     } else if (newPassword.length < 6) {
         alert("It’s too short password. Sorry.");
     } else if (newPassword === prompt("please enter new password once more")) {
         alert("You have successfully changed your password.");
     } else {
-        alert("You wrote the wrong password.")
+        alert("You wrote the wrong password.");
     }
 }
