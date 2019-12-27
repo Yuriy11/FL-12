@@ -22,10 +22,10 @@ if (continueGame) {
             console.log("current attempt : " + currentAttempt + "; pocket number : " + currentPocketNumber);
             while (!acceptUserChoise) {
                 userInput = prompt("Chose a roulette pocket from 0 to " +
-                    (initialPocketAmount * pocketAmountMultiplier) +
+                    initialPocketAmount * pocketAmountMultiplier +
                     "\nAttempts left: " + (3 - currentAttempt) + " attempts" +
                     "\nTotal prize: " + userPrize + "$" +
-                    "\nPossible prize on current attempt: " + (prizes[currentAttempt] * prizeMultiplier) + "$");
+                    "\nPossible prize on current attempt: " + prizes[currentAttempt] * prizeMultiplier + "$");
                 if (userInput !== null) {
                     if (Number(userInput) <= initialPocketAmount * pocketAmountMultiplier && Number(userInput) >= 0) {
                         acceptUserChoise = true;
