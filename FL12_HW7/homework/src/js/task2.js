@@ -17,9 +17,6 @@ if (continueGame) {
             userInput = null;
             userPocketChoise = null;
             acceptUserChoise = false;
-            console.log("Chose a roulette pocket from 0 to " +
-                initialPocketAmount * pocketAmountMultiplier);
-            console.log("current attempt : " + currentAttempt + "; pocket number : " + currentPocketNumber);
             while (!acceptUserChoise) {
                 userInput = prompt("Chose a roulette pocket from 0 to " +
                     initialPocketAmount * pocketAmountMultiplier +
@@ -27,7 +24,10 @@ if (continueGame) {
                     "\nTotal prize: " + userPrize + "$" +
                     "\nPossible prize on current attempt: " + prizes[currentAttempt] * prizeMultiplier + "$");
                 if (userInput !== null) {
-                    if (Number(userInput) <= initialPocketAmount * pocketAmountMultiplier && Number(userInput) >= 0) {
+                    if (!Number.isInteger(Number(userInput))) {
+                        alert("Entered value should be integer")
+                    } else if (Number(userInput) <= initialPocketAmount * pocketAmountMultiplier &&
+                        Number(userInput) >= 0) {
                         acceptUserChoise = true;
                         userPocketChoise = Number(userInput);
                     } else {
@@ -38,7 +38,6 @@ if (continueGame) {
                     acceptUserChoise = true;
                 }
             }
-            console.log("user choise " + userPocketChoise);
             if (userPocketChoise === currentPocketNumber) {
                 userGuessed = true;
                 userPrize += prizes[currentAttempt] * prizeMultiplier;
