@@ -7,3 +7,5 @@ function makeNumber(inputString) {
     }
     return result;
 }
+
+makeNumber("qwe14958jhjer482");

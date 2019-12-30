@@ -11,3 +11,5 @@ function countNumbers(inputString) {
     }
     return resultMap;
 }
+
+countNumbers("qwe82348wehnve234");

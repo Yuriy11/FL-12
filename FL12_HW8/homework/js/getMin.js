@@ -8,3 +8,5 @@ function getMin() {
     }
     return result;
 }
+
+getMin(-1, 2, 5, 888);

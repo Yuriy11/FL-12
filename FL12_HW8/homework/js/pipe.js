@@ -3,9 +3,11 @@ function addOne(input) {
 }
 
 function pipe(input) {
-    result = input;
+    let result = input;
     for (let i = 1; i < arguments.length; i++) {
         result = arguments[i](result);
     }
     return result;
 }
+
+pipe(1, addOne)
