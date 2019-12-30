@@ -1,9 +1,9 @@
 function makeNumber(inputString) {
     let result = "";
-    for (let symbol of arguments) {
-        if (symbol >= 0 && symbol <= 9) {
+    for (let symbol of inputString) {
+        if (Number(symbol) >= 0 && Number(symbol) <= 9) {
             result += symbol;
         }
     }
-    return parseInt(result);
+    return result;
 }

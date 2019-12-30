@@ -1,8 +1,8 @@
-function makeNumber(inputString) {
-    let result = 0;
-    for (let symbol of arguments) {
-        if (symbol >= 0 && symbol <= 9) {
-            result += parseInt(symbol);
+function countNumbers(inputString) {
+    let result = "";
+    for (let symbol of inputString) {
+        if (Number(symbol) >= 0 && Number(symbol) <= 9) {
+            result += symbol;
         }
     }
     return result;

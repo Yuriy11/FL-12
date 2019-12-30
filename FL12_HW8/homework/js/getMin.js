@@ -1,8 +1,9 @@
 function getMin() {
-    let result;
-    for (let number of arguments) {
-        if (result < number) {
-            result = number;
+    let result = arguments[0];
+    for (let i = 1; i < arguments.length; i++) {
+        console.log("result:" + result + ";number:" + arguments[i])
+        if (result > arguments[i]) {
+            result = arguments[i];
         }
     }
     return result;
