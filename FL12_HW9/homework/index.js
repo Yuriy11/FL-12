@@ -51,4 +51,3 @@ function makeListFromRange(array){
     return result;
 }
 
-getArrayOfKeys(objects,)
