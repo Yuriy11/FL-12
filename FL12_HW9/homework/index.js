@@ -61,11 +61,12 @@ const actors = [
 ];
 
 function getArrayOfKeys(objects, keyName) {
-    let _objects = objects;
-    executeforEach(_objects, function (el) { 
-        return el[keyName];
+    let result=[];
+    executeforEach(objects, function (el) { 
+        result.push(el[keyName]);
+        return el;
     });
-    return _objects;
+    return result;
 }
 
 function substitute(arr) {
@@ -79,7 +80,7 @@ function substitute(arr) {
     let _arr = mapArray(arr, substituteSubFun);
     return _arr;
 }
-const custDate = new Date('6/15/2018 09:14:00');
+const date = new Date('6/15/2018 09:14:00');
 function getPastDay(date, daysBefore) {
     return new Date(date.getTime() - daysBefore * 86400000);
 }
