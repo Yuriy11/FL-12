@@ -1,44 +1,37 @@
-/* Your code goes here */
 class Fighter {
-    
     constructor(fighterCHaracteristics) {
-        this.wins = 0;
-        this.losses = 0;
-        this.name = fighterCHaracteristics.name;
-        this.strength = fighterCHaracteristics.strength;
-        this.agility = fighterCHaracteristics.agility;
-        this.health = fighterCHaracteristics.hp;
-        this.damage = fighterCHaracteristics.damage;
-
-    }
-    wins() {
-        return undefined;
+        this._wins = 0;
+        this._losses = 0;
+        this._name = fighterCHaracteristics.name;
+        this._strength = fighterCHaracteristics.strength;
+        this._agility = fighterCHaracteristics.agility;
+        this._health = fighterCHaracteristics.hp;
+        this._damage = fighterCHaracteristics.damage;
     }
     getName() {
-        return this.name;
+        return this._name;
     }
     getDamage() {
-        return this.damage;
+        return this._damage;
     }
     getStrength() {
-        return this.strength;
+        return this._strength;
     }
     getAgility() {
-        return this.agility;
+        return this._agility;
     }
     getHealth() {
-        return this.health;
+        return this._health;
     }
     dealDamage(amount) {
-        this.health -= amount;
-        if (this.health < 0) {
-            this.health = 0;
+        this._health -= amount;
+        if (this._health < 0) {
+            this._health = 0;
         }
     }
     attack(defendingFigther) {
-
         if ((defendingFigther.getAgility() + defendingFigther.getStrength()) / 100 < Math.random()) {
-            defendingFigther.dealDamage(this.damage);
+            defendingFigther.dealDamage(this._damage);
             console.log(this.getName() + "makes " + this.getDamage() + " to " + defendingFigther.getName());
         } else {
 
@@ -46,17 +39,16 @@ class Fighter {
         }
     }
     heal(amount) {
-        this.health += amount;
+        this._health += amount;
     }
     addWin() {
-        this.wins += 1;
+        this._wins += 1;
     }
-
     addLoss() {
-        this.losses += 1;
+        this._losses += 1;
     }
     logCombatHistory() {
-        console.log("Name: " + this.getName() + ", Wins: " + this.wins + ", Losses: " + this.losses);
+        console.log("Name: " + this.getName() + ", Wins: " + this._wins + ", Losses: " + this._losses);
     }
 }
 
